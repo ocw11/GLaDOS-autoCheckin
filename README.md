@@ -34,4 +34,4 @@
 
 ## Server酱
 
-参考[http://sc.ftqq.com/3.version](http://sc.ftqq.com/3.version)
+参考：[http://sc.ftqq.com/3.version](http://sc.ftqq.com/3.version)
