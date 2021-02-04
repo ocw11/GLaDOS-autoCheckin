@@ -32,3 +32,6 @@
 
 也就是说，**定时执行的任务需要每隔 60 天激活一次**。
 
+## Server酱
+
+参考[http://sc.ftqq.com/3.version](http://sc.ftqq.com/3.version)

@@ -10,14 +10,25 @@ on:
     - cron: 0 */6 * * *
 
 jobs:
-  GLaDOS-checkin:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: checkin
-        env:
-          COOKIE: ${{ secrets.COOKIE }}
-        run: |
-          ./checkin.sh
+    - name: Install Python
+      run: |
+        sudo apt update && \
+        sudo apt install python3
+      
+    - name: requirements
+      run: |
+        pip3 install -r requirements.txt
+        
+    - name: Checkin
+      run: |
+        python3 checkin.py 
+      env: 
+        SERVE: ${{ secrets.SERVE }}
+        SCKEY: ${{ secrets.SCKEY }}
+        COOKIE: ${{ secrets.COOKIE }}
